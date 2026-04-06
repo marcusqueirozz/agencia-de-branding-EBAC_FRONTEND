@@ -48,54 +48,47 @@ a {
 }
 
 
+/* UTILS */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* HEADER */
-header {
-    background-color: #f7f7f7;
-
-    display: flex;
+.header {
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+
+    background-color: #f7f7f7;
 
     min-width: 100%;
 
     padding: 1rem 2rem;
 }
 
-header section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.header__logo{
     width: 90%;
     height: 100%;
 }
 
-header section img {
+.header__logo-image{
     width: 60%;
     height: 100%;
 
-    object-fit: contain;
+    object-fit: contain;   
 }
 
-header nav {
+.header__nav {
     font-size: 1.2em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     height: 100%;
 
     padding: 0.5em;
 }
 
-header nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.header__menu {
     gap: 0.5em;
 
     width: 100%;
@@ -107,34 +100,27 @@ header nav ul {
 
 /* MAIN */
 .hero {
-    background-color: #f7f7f7;
-
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+
+    background-color: #f7f7f7;
 
     min-height: 100dvh;
-
     width: 100%;
 
     gap: 1.5em;
-
     padding: 5rem 2rem;
 }
 
-.hero article h3 {
-    font-size: 2.5em;
+
+.hero__title {
+    font-size: 2.5rem;
     font-weight: bold;
 
     line-height: 1.2em;
 }
 
-.hero article a {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
+.hero__cta {
     font-size: 1em;
     color: #ffffff;
 
@@ -144,17 +130,15 @@ header nav ul {
     background-color: #ff3c3c;
 }
 
-.hero img {
-    height: 30%;
+.hero__image {
+    width: 100%;
+    height: auto;
 }
 
 
 
-.sobre {
-    display: flex;
+.about {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 
     min-height: 100vh;
@@ -162,17 +146,17 @@ header nav ul {
     padding: 2rem;
 }
 
-.sobre h2 {
+.about__title {
     font-size: 3em;
 }
 
-.sobre p {
+.about__text {
     font-size: 1.4em;
 }
 
 
 
-.servicos {
+.services {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -184,13 +168,15 @@ header nav ul {
     padding: 2rem;
 }
 
-.servicos article {
+.services__card {
     color: #f7f7f7;
 
+    /* Display Flex dentro do Card por fator de legibilidade do HTML*/
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    flex-direction: column;
     text-align: center;
 
     height: 100%;
@@ -199,65 +185,49 @@ header nav ul {
     border-radius: 0.5rem;
 }
 
-.servicos article h3 {
+.services__title {
     font-size: 2em;
     font-weight: bold;
 }
 
-.servicos article p {
+.services__text {
     font-size: 1.5em;
 }
 
-.branding {
+.services__card--branding {
     background-color: #ff3c3c;
-    
 }
 
-.design {
+.services__card--design {
     background-color: #9b9b99;
-    
 }
 
-.sites {
+.services__card--sites {
     background-color: #000000;
-    
 }
 
 
 
-.depoimentos {
-    display: flex;
+.testimonials {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
     min-height: 100vh;  
-
     padding: 2rem;
     gap: 2em;
 }
 
-.depoimentos h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.testimonials__title {
     text-align: center;
     font-size: 2.5em;
 }
 
-.depoimentos ul {
-    display: flex;
+.testimonials__list {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     gap: 1em;
-
     width: 90%;
     height: 100%;
 }
 
-.depoimentos ul li {
+.testimonials__client {
     display: flex;
     flex-direction: column;
 
@@ -271,15 +241,12 @@ header nav ul {
 
 
 
-.contato {
+.contact {
+    flex-direction: column;
+    text-align: center;
+
     color: #ffffff;
     background-color: #000000;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
     width: 100%;
     min-height: 100vh;
@@ -287,18 +254,19 @@ header nav ul {
     padding: 2rem;
 }
 
-.contato h2 {
+.contact__title {
     font-size: 1.8em;
     padding: 0.5em;
 }
 
-.contato form {
-    display: flex;
-    flex-direction: column;
+.contact__form {
     justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
 
     padding: 1.5em;
+
+    font-size: 1em;
+    font-style: italic;
 
     background-color: #ffffff;
     border-radius: 20px;
@@ -308,33 +276,24 @@ header nav ul {
     max-width: 30em;
 }
 
-.contato form,
-.contato input,
-.contato textarea {
-    font-size: 1em;
-    font-style: italic;
-    text-align: center;
-
-}
-
-.contato input {
+.contact__input {
     width: 100%;
     height: 3em;
 }
 
-.contato input, .contato textarea {
+.contact__input, .contact__textarea {
     border-radius: 5px;
     background-color: #f7f7f7;
+    text-align: center;
 }
 
-.contato textarea {
-    font-style: normal;
+.contact__textarea {
+    font-style: italic;
 
     min-width: 100%;
 
     width: 100%;
     height: 8em;
-
     max-width: 100%;
     max-height: 15em;
 
@@ -343,10 +302,7 @@ header nav ul {
     padding: 0.8em;
 }
 
-.contato button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact__button {
     text-align: center;
 
     color: #ffffff;
@@ -355,19 +311,17 @@ header nav ul {
     padding: 1em 2em;
     border-radius: 0.5em;
     background-color: #ff3c3c;
-
 }
 
 
 
-/* FOOTER */
-footer {
-    background-color: #f7f7f7;
-
+.footer {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    flex-direction: column;
+    
+    background-color: #f7f7f7;
 
     width: 100%;
 
@@ -376,39 +330,36 @@ footer {
     padding: 2rem; 
 }
 
-footer p {
-    color: #9b9b99;
-}
-
-footer h3 {
+.footer__title {
     font-size: 1em;
 }
 
-.logoFooter {
+.footer__text {
+    color: #9b9b99;
+}
+
+.footer__content {
     width: 90%;
 }
 
-.logoFooter img {
+.footer__image {
     width: 100%;
     height: auto;
 
     object-fit: contain;
 }
 
-
-
 /* MEDIA QUERIES */
-
 /* ===== TABLET ===== */
 @media (min-width: 768px) {
     /* HEADER */
-    header {
+    .header {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-between;    
     }
 
-    .logoNav{
+    .header__logo {
         display: flex;
         justify-content: flex-start;
 
@@ -425,7 +376,7 @@ footer h3 {
     }
 
     /* FOOTER */
-    .logoFooter img{
+    .footer__content {
         width: 60%;
     }
 }
@@ -433,18 +384,17 @@ footer h3 {
 /* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
     /* HEADER */
-    header section img {
+    .header__logo-image {
         width: 30%;
     }
 
-    header nav {
+    .header__nav {
         width: 30%;
     }
 
-    header nav ul {
+    .header__menu {
         justify-content: space-around;
     }
-
 
 
     /* MAIN */
@@ -454,7 +404,7 @@ footer h3 {
         padding: 0;
     }
 
-    .hero article {
+    .hero__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -465,30 +415,27 @@ footer h3 {
         height: 100%;
     }
 
-    .hero article h3 {
+    .hero__title {
         font-size: 4em;
         line-height: 1.3em;
     }
 
-    .hero img {
+    .hero__image {
         height: auto;
         display: flex;
         justify-content: center;
     }
 
 
-
-    .sobre h2 {
+    .about__title {
         font-size: 5rem;
     }
 
-    .sobre p {
+    .about__text {
         width: 50%;
     }
 
-
-
-    .servicos {
+    .services {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2rem;
@@ -498,70 +445,56 @@ footer h3 {
         padding: 6rem 0;
     }
 
-    .servicos article {
+   .services__card {
         color: #f7f7f7;
         padding: 2rem;
         border-radius: 0.5rem;
     }
 
-    .servicos article h3 {
+    .services__title {
         font-size: 3rem;
     }
 
-    .branding {
-        color: #f7f7f7;
-        background-color: #ff3c3c;
-    }
 
-    .design {
-        background-color: #9b9b99;
-    }
-
-    .sites {
-        background-color: #000000;
-    }
-
-
-
-    .depoimentos h2 {
+    .testimonials__title {
         font-size: 4rem;
     }
 
 
-    .contato h2 {
+    .contact__title {
         font-size: 3rem;
     }
 
-    .contato form {
+    .contact__form {
         width: 100%;
         max-width: 35rem;
     }
 
-    .contato textarea {
+    .contact__textarea {
         height: 15rem;
     }
 
 
-    footer {
+    .footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
     
-    footer p {
+    .footer__text {
         text-align: center;
     }
 
-    footer section p {
+    .footer__logo-text {
         text-align: start;
         width: 60%;
     }
 
-    .logoFooter {
+    .footer__content{
         width: 40%;
     }
 
-    .logoFooter img {
+    .footer__image {
         width: 50%;
     }
 }

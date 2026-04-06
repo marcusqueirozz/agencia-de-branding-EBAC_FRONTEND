@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criativa Web</title>
 
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/src/client/styles/layout.css">
 </head>
 <body>
-    <header>
-        <section class="logoNav">
+    <header class="header flex-center">
+        <a href="#hero" class="header__logo flex-center">
+
             <img 
+                class="header__logo-image"
+
                 src="images/logo.png" 
 
                 srcset="images/logo.png 600w,           
@@ -23,27 +26,35 @@
                 
                 alt="Logo Criativa Web"
             >
-        </section>
+        </a>
     
-        <nav>
-            <ul>
-                <li><a href="#hero">HOME</a></li>
-                <li><a href="#sobre">SOBRE</a></li>
-                <li><a href="#servicos">SERVIÇOS</a></li>
-                <li><a href="#contato">CONTATO</a></li>
+        <nav class="header__nav flex-center">
+            <ul class="header__menu flex-center">
+                <li class="header__menu-item"><a href="#hero">HOME</a></li>
+                <li class="header__menu-item"><a href="#sobre">SOBRE</a></li>
+                <li class="header__menu-item"><a href="#servicos">SERVIÇOS</a></li>
+                <li class="header__menu-item"><a href="#contato">CONTATO</a></li>
             </ul>            
         </nav>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <article>
-                <h3>Sua marca com propósito, presença e performance.</h3>
-                <a href="#contato"><strong>NOS CONTE SOBRE O SEU PROJETO!</strong></a>
-            </article>
+    <main class="main">
+        <section id="hero" class="hero flex-center">
+
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Sua marca com propósito, presença e performance.
+                </h1>
+                
+                <a href="#contato" class="hero__cta flex-center">
+                    <strong>NOS CONTE SOBRE O SEU PROJETO!</strong>
+                </a>
+            </div>
             
-            <article>
-                <img 
+            <div class="hero__content">
+                <img
+                    class="hero__image"
+
                     src="images/cta_hero.png" 
 
                     srcset="images/cta_hero.png 600w,           
@@ -56,13 +67,14 @@
 
                     alt="Call To Action Image"
                 >
-
-            </article>
+            </div>
         </section>
 
-        <section id="sobre" class="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Na Criativa Web, acreditamos que toda marca tem uma história única que
+        <section id="sobre" class="about flex-center">
+            
+            <h2 class="about__title">Sobre Nós</h2>
+            <p class="about__text">
+                Na Criativa Web, acreditamos que toda marca tem uma história única que
                 merece ser contada com estratégia e autenticidade. Unimos criatividade,
                 tecnologia e análise de mercado para construir experiências digitais que
                 geram conexão, posicionamento e resultados reais. Nosso foco é transformar
@@ -70,38 +82,45 @@
             </p>
         </section>
 
-        <section id="servicos" class="servicos">
-            <article class="branding">
-                <h3>Branding</h3>
-                <p>Desenvolvemos identidades visuais fortes e coerentes com o propósito da sua marca.
+        <section id="servicos" class="services">
+
+            <article class="services__card services__card--branding">
+
+                <h3 class="services__title">Branding</h3>
+                <p class="services__text">
+                    Desenvolvemos identidades visuais fortes e coerentes com o propósito da sua marca.
                     Criamos posicionamento, tom de voz e identidade estratégica para que seu negócio
                     se destaque e seja lembrado no mercado.
                 </p>
             </article>
 
-            <article class="design">
-                <h3>Designs Inovadores</h3>
-                <p>Projetamos experiências visuais modernas e funcionais, priorizando usabilidade e impacto.
+            <article class="services__card services__card--design">
+
+                <h3 class="services__title">Designs Inovadores</h3>
+                <p class="services__text">
+                    Projetamos experiências visuais modernas e funcionais, priorizando usabilidade e impacto.
                     Cada layout é pensado para comunicar com clareza, gerar valor e fortalecer
                     a presença digital da sua empresa.
                 </p>
             </article>
 
-            <article class="sites">
-                <h3>Sites</h3>
-                <p>Desenvolvemos sites responsivos, rápidos e otimizados para conversão. 
+            <article class="services__card services__card--sites">
+
+                <h3 class="services__title">Sites</h3>
+                <p class="services__text">
+                    Desenvolvemos sites responsivos, rápidos e otimizados para conversão. 
                     Utilizamos tecnologias atuais para garantir performance, 
                     segurança e uma navegação intuitiva em qualquer dispositivo.
                 </p>
             </article>
         </section>        
 
-        <section id="depoimentos" class="depoimentos">
-            <h2>Quem conhece recomenda!</h2>
+        <section id="depoimentos" class="testimonials flex-center">
 
-            <ul>
-                <li>
-                    <h3>Cliente 1</h3>
+            <h2 class="testimonials__title flex-center">Quem conhece recomenda!</h2>
+            <ul class="testimonials__list flex-center">
+                <li class="testimonials__client">
+                    <h3>Maria Alcantara</h3>
                     <p>⭐⭐⭐⭐⭐</p>
                     <p>A Criativa Web transformou completamente nossa presença digital. 
                         O profissionalismo e a atenção aos detalhes fizeram toda a diferença 
@@ -109,8 +128,8 @@
                     </p>
                 </li>
 
-                <li>
-                    <h3>Cliente 2</h3>
+                <li class="testimonials__client">
+                    <h3>João Augusto</h3>
                     <p>⭐⭐⭐⭐⭐</p>
                     <p>Desde o primeiro contato percebemos o comprometimento da equipe. 
                         O site ficou moderno, funcional e alinhado com a identidade da nossa marca. 
@@ -119,23 +138,28 @@
             </ul>
         </section>
 
-        <section id="contato" class="contato">
-            <h2>Fale Conosco!</h2>
-            <form>
-                <input type="text" placeholder="Seu nome">
-                <input type="email" placeholder="Email*" required>
-                <input type="tel" placeholder="Telefone">
-                <textarea placeholder="Mensagem*" required></textarea>
+        <section id="contato" class="contact flex-center">
 
-                <button type="submit">Enviar</button>
+            <h2 class="contact__title">Fale Conosco!</h2>
+            <form class="contact__form flex-center">
+
+                <input class="contact__input" type="text" placeholder="Seu nome">
+                <input class="contact__input" type="email" placeholder="Email*" required>
+                <input class="contact__input" type="tel" placeholder="Telefone">
+                
+                <textarea class="contact__textarea" placeholder="Mensagem*" required></textarea>
+
+                <button class="contact__button flex-center" type="submit">Enviar</button>
             </form>
         </section>
 
     </main>
 
-    <footer>
-        <section class="logoFooter">
-            <img 
+    <footer class="footer">
+        <section class="footer__content">
+            <img
+                class="footer__image"
+
                 src="images/logo.png"
 
                 srcset="images/logo.png 600w,           
@@ -149,9 +173,10 @@
                 alt="Logo Criativa Web"
             >
 
-            <h3>Desenvolvendo Mundos e Criando Histórias</h3>
+            <h3 class="footer__logo-title">Desenvolvendo Mundos e Criando Histórias</h3>
 
-            <p> Entendemos as necessidades de projetos criativos e inovadores. 
+            <p class="footer__logo-text"> 
+                Entendemos as necessidades de projetos criativos e inovadores. 
                 Trabalhamos com metodologias modernas e foco em resultados, 
                 unindo estratégia e design para impulsionar 
                 o crescimento do seu negócio no ambiente digital.
@@ -160,6 +185,7 @@
 
         <section>
             <h3>✉ E-mail</h3>
+
             <address>
                 <a href="mailto:criativaWeb@email.com">
                     criativaWeb@email.com
@@ -167,7 +193,7 @@
             </address>
         </section>
 
-        <p>&copy; Marcus Silva 2026</p>
+        <p class="footer__text">&copy; Marcus Silva 2026</p>
 
     </footer>
 </body>
