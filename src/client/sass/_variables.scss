@@ -1,0 +1,30 @@
+@use 'sass:math' ;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Fonts
+$primary-font: 'Roboto', sans-serif;
+
+$font-size-pattern: 2rem;
+$half-font-size: calc($font-size-pattern / 2); // 1
+$title-size: 2.5rem;
+$subtitle-size: 1.5rem;
+
+// Spacing
+$min-height: 100vh;
+$padding-pattern: 2rem;
+$half-padding: calc($padding-pattern / 2);
+
+$hero-padding-pattern: calc($padding-pattern + 3rem) $padding-pattern;
+
+// Base Colors
+$primary-color: #f7f7f7;
+$light-color: #ffffff;
+$dark-color: #000000;
+
+// Colors
+$light-grey: #9b9b99;
+$dark-grey: #555;
+$red: #ff3c3c;
+
+// Border
+$border-radius-pattern: 0.5rem;

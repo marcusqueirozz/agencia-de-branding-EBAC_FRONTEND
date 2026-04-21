@@ -1,0 +1,47 @@
+@use 'variables';
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 1.5;
+
+    font-family: variables.$primary-font;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ACESSIBILIDADE */
+:focus {
+   outline: 2px solid #000000;
+}

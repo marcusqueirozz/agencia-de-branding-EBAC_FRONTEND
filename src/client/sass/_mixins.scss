@@ -1,0 +1,29 @@
+@use 'variables' ;
+
+// Anteriormente utilizado como Utils: Flex-Center no HTML
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin basic-button {
+    color: variables.$light-color;
+
+    border-radius: variables.$border-radius-pattern;
+    background-color: variables.$red;
+}
+
+
+// MEDIA QUERIES 
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}

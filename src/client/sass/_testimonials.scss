@@ -1,0 +1,51 @@
+@use 'variables' ;
+@use 'mixins' ;
+
+.testimonials {
+    @include mixins.flex-center;
+
+    flex-direction: column;
+
+    gap: 2em;
+
+    min-height: variables.$min-height;  
+
+    padding: variables.$padding-pattern;
+
+    &__title {
+        @include mixins.flex-center;
+
+        text-align: center;
+        font-size: variables.$title-size;
+    }
+
+    &__list {
+        @include mixins.flex-center;
+
+        flex-direction: column;
+
+        gap: 1em;
+
+        width: 90%;
+        height: 100%;
+    }
+
+    &__client {
+        display: flex;
+        flex-direction: column;
+
+        width: 85%;
+        max-width: 30em;
+        padding: 1.5em;
+
+        border-radius: 10px;    
+        background-color: variables.$primary-color;
+    }
+
+    @include mixins.desktop {
+        &__title {
+            font-size: 4rem;
+        }
+    }
+    
+}

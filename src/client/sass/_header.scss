@@ -1,0 +1,79 @@
+@use 'variables' ;
+@use 'mixins' ;
+
+.header {
+    @include mixins.flex-center;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: variables.$primary-color;
+
+    min-width: 100%;
+
+    padding: variables.$half-padding variables.$padding-pattern;
+
+    &__logo {
+        @include mixins.flex-center;
+
+        width: 90%;
+        height: 100%;
+    }
+
+    &__logo-image {
+        width: 60%;
+        height: 100%;
+
+        object-fit: contain;   
+    }
+
+    &__nav {
+        @include mixins.flex-center;
+
+        font-size: 1.2rem;
+
+        height: 100%;
+
+        padding: 0.5em;
+    }
+
+    &__menu {
+        @include mixins.flex-center;
+
+        gap: 0.5em;
+
+        width: 100%;
+
+        color: variables.$dark-grey;
+    }
+    
+    @include mixins.tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        &__logo {
+            display: flex;
+            justify-content: flex-start;
+
+            padding-left: variables.$half-padding;
+
+            width: 50%;
+        }
+    }
+
+    @include mixins.desktop {
+        &__logo-image {
+            width: 30%;
+        }
+
+        &__nav {
+            width: 30%;
+        }
+
+        &__menu {
+            justify-content: space-around;
+        }
+    }
+
+}

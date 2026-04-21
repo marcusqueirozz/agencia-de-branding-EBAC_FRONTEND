@@ -1,0 +1,33 @@
+@use 'sass:math' ;
+
+@use 'variables' ;
+@use 'mixins' ;
+
+.about {
+    @include mixins.flex-center;
+
+    flex-direction: column;
+    text-align: center;
+
+    min-height: variables.$min-height;
+
+    padding: variables.$padding-pattern;
+
+    &__title {
+        font-size: calc(variables.$font-size-pattern + 1rem);
+    }
+
+    &__text {
+        font-size: variables.$subtitle-size;
+    }
+
+    @include mixins.desktop {
+        &__title {
+            font-size: 5rem;
+        }
+
+        &__text {
+            width: 50%;
+        }
+    }
+}

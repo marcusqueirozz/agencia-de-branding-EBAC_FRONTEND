@@ -1,0 +1,70 @@
+@use 'variables' ;
+@use 'mixins' ;
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+
+    gap: 1em;
+
+    min-height: variables.$min-height;
+
+    padding: variables.$padding-pattern;
+
+    &__card {
+        @include mixins.flex-center;
+
+        flex-direction: column;
+        text-align: center;
+
+        color: variables.$primary-color;
+
+        height: 100%;
+
+        padding: variables.$padding-pattern;
+        border-radius: variables.$border-radius-pattern;
+    }
+
+    &__title {
+        font-size: variables.$font-size-pattern;
+        font-weight: bold;        
+    }
+
+    &__text {
+        font-size: variables.$subtitle-size;
+    }
+
+    &__card--branding {
+        background-color: variables.$red;
+    }
+
+    &__card--design {
+        background-color: variables.$light-grey;
+    }
+
+    &__card--sites {
+        background-color: variables.$dark-color;
+    }
+
+    @include mixins.desktop {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+
+        width: 80%;
+        margin: 0 auto;
+        padding: 6rem 0;
+
+        &__card {
+            color: variables.$primary-color;
+            padding: variables.$padding-pattern;
+            border-radius: variables.$border-radius-pattern;
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+    }
+}

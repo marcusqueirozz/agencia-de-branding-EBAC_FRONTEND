@@ -1,0 +1,75 @@
+@use 'sass:math' ;
+@use 'variables' ;
+@use 'mixins' ;
+
+.hero {
+    @include mixins.flex-center;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: variables.$primary-color;
+
+    min-height: variables.$min-height;
+    width: 100%;
+
+    gap: 1.5em;
+    padding: variables.$hero-padding-pattern;
+
+    &__title {
+        font-size: variables.$title-size;
+        font-weight: bold;
+        line-height: 1.2em;
+    }
+
+    &__cta {
+        @include mixins.flex-center;
+        
+        font-size: variables.$half-font-size;
+
+        margin-top: 0.5em;
+
+        padding: variables.$half-padding;
+
+        @include mixins.basic-button;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    @include mixins.tablet {
+        display: flex;
+        flex-direction: row;
+        padding: 5rem 3rem;
+    }
+
+    @include mixins.desktop {
+        justify-content: center;
+        height: variables.$min-height;
+        padding: 0;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            
+            width: 30%;
+            height: 100%;   
+        }
+
+        &__title {
+            font-size: 4em;
+            line-height: 1.3em;
+        }
+        
+        &__image {
+            display: flex;
+            justify-content: center;
+            height: auto;
+        }
+    }
+
+}
